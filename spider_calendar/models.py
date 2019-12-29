@@ -157,7 +157,7 @@ class Event(BaseEvent):
         }
     ]
 
-    # references is for calendars
+    # assigned.references is for calendars and required events and workplans
 
 
 @add_by_field(registry.contents, "_meta.model_name")
@@ -166,8 +166,8 @@ class EventInterference(BaseEvent):
 
     appearances = [
         {
-            # tops whatever it blocks
+            # tops whatever it blocks (e.g. holiday, illness)
             "name": "EventInterference"
         },
     ]
-    # references is for events
+    # assigned.references is for events, workplans
